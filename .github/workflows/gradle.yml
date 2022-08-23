@@ -54,18 +54,18 @@ jobs:
         paths: '**/build/test-results/test/TEST-*.xml'
 
     - name: Add coverage comment A
-      id: jacoco-A
       uses: madrapps/jacoco-report@v1.2
       with:
+        title: jacoco-A
         paths: ${{ github.workspace }}/app/aaa/build/reports/jacoco/test/jacocoTestReport.xml
         token: ${{ secrets.GITHUB_TOKEN }}
         min-coverage-overall: 40
         min-coverage-changed-files: 60
 
     - name: Add coverage comment C
-      id: jacoco-C
       uses: madrapps/jacoco-report@v1.2
       with:
+        title: jacoco-C
         paths: ${{ github.workspace }}/app/ccc/build/reports/jacoco/test/jacocoTestReport.xml
         token: ${{ secrets.GITHUB_TOKEN }}
         min-coverage-overall: 40
