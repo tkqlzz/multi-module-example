@@ -18,7 +18,7 @@ class CccApplicationTests {
 
     @Test
     fun temp2() {
-        Assertions.assertEquals(4, 4)
+        Assertions.assertEquals(5, 5)
     }
 
 }
