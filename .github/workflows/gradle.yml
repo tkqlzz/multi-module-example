@@ -26,11 +26,21 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         
-    - name: Build with Gradle
+    - name: Build with Gradle A
       uses: gradle/gradle-build-action@v2.2.5
       with:
-        arguments: build
-        
+        arguments: :app:aaa:build
+
+    - name: Build with Gradle B
+      uses: gradle/gradle-build-action@v2.2.5
+      with:
+        arguments: :app:bbb:build
+
+    - name: Build with Gradle C
+      uses: gradle/gradle-build-action@v2.2.5
+      with:
+        arguments: :app:ccc:build
+
     - name: Publish Test Report
       uses: mikepenz/action-junit-report@v3.3.3
       if: always() # always run even if the previous step fails
